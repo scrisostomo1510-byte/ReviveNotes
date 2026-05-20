@@ -31,7 +31,7 @@ class ReviveNotesApp(Adw.Application):
         self.set_accels_for_action("win.toggle-wrap", ["<Alt>z"])
 
     def do_activate(self):
-        win = self.props.active_window1
+        win = self.props.active_window
         if not win:
             win = ReviveNotesWindow(application=self)
         win.present()
